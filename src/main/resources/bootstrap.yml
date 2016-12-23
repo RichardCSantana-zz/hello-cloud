@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: hello
+  cloud:
+    config:
+      retry:
+        max-attempts: 3
+        multiplier: 2
+      fail-fast: true
+      uri: ${CONFIG_SERVER_URL:http://localhost:8888}
